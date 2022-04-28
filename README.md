@@ -1,0 +1,2 @@
+# WeakVim
+Neovim for dummies
