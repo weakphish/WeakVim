@@ -21,3 +21,32 @@ Here's a brief description of each file and it's purpose.
 - `nvim-tree-config.lua`: Configuration for the `nvim-tree` plugin.
 - `packer-setup.lua`: Code that bootstraps packer.
 - `plugins.lua`: Declares my plugins for packer.
+
+# Default Bindings
+Most bindings use the default leader key, SPC. A major key in selecting bindings was to try and keep
+them mnemonic.
+
+## Telescope
+- `<leader>ff` to open a file finder
+- `<leader>fg` to open a fuzzy finder (ripgrep)
+- `<leader>fb` to open a buffer finder.
+- `<leader>fh` to open a tag menu.
+
+## Aerial (file outline)
+- `<leader>tb` to toggle Aerial outline
+
+## NvimTree
+- `<leader>nt` to toggle NvimTree
+
+## LSP / Completion
+My configuration uses the default `nvim-lsp-setup` bindings. Copied below:
+
+- `gD` = Go to declaration
+- `gd` = Go to definition
+- `gt` = Show type definition
+- `gi` = Show implementationimplementation()
+- `gr` = Show references 
+- `K` = `shift + k` = Show hover 
+- `<leader>rn` = Rename symbol 
+- `<leader>ca` = Show code actions in a hover window 
+- `<leader>f` = Format selection 
