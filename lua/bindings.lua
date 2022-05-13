@@ -33,12 +33,3 @@ vim.api.nvim_set_keymap('n', '{', '<cmd>AerialPrev<CR>', {noremap=true})
 vim.api.nvim_set_keymap('n', '}', '<cmd>AerialNext<CR>', {noremap=true})
 vim.api.nvim_set_keymap('n', '[[', '<cmd>AerialPrevUp<CR>', {noremap=true})
 vim.api.nvim_set_keymap('n', ']]', '<cmd>AerialNextUp<CR>', {noremap=true})
-
--- NVIMTree
-vim.api.nvim_set_keymap(
-    "n",
-    "<leader>nt",
-    ":NvimTreeToggle<cr>",
-    { noremap = true}
-)
-

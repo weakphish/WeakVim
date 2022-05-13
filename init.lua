@@ -13,7 +13,6 @@ require('appearance')
 require('editor')
 -- Plugin Configurations
 require('aerial-config')
-require('nvim-tree-config')
 require('indent-config')
 require('lualine-config')
 -- Keybindings and completion

@@ -1,13 +1,6 @@
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'        -- Packer manages itself, lol
     -- IDE-Features
-    use {
-        'kyazdani42/nvim-tree.lua',
-        requires = {
-              'kyazdani42/nvim-web-devicons', -- optional, for file icon
-            },
-        config = function() require'nvim-tree'.setup {} end
-    }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } 
     use {'stevearc/aerial.nvim'}        -- Outline of file
     use 'tpope/vim-fugitive'            -- Git stuff
@@ -30,6 +23,7 @@ return require('packer').startup(function()
     use 'simrat39/rust-tools.nvim'      -- ...and even more...
     use 'p00f/clangd_extensions.nvim'   -- clangd extensions for C LSP
     use 'fatih/vim-go'                  -- Specific stuff for Go
+    use 'dart-lang/dart-vim-plugin'     -- Dart support
     -- Aesthetic/Appearance
     use 'sainnhe/gruvbox-material'      -- A refresh on a classic
     use 'sainnhe/sonokai'               -- Monokai Pro, but free
