@@ -18,7 +18,6 @@ Here's a brief description of each file and it's purpose.
 - `editor.lua`: General editor behavior. Pretty brief, kind of a catch-all for stuff that doesn't fit elsewhere.
 - `indent-config.lua`: Configuration for the `indent-blankline` plugin.
 - `lualine-config.lua`: Configuration for `lualine` plugin.
-- `nvim-tree-config.lua`: Configuration for the `nvim-tree` plugin.
 - `packer-setup.lua`: Code that bootstraps packer.
 - `plugins.lua`: Declares my plugins for packer.
 
@@ -34,9 +33,6 @@ them mnemonic.
 
 ## Aerial (file outline)
 - `<leader>tb` to toggle Aerial outline
-
-## NvimTree
-- `<leader>nt` to toggle NvimTree
 
 ## LSP / Completion
 My configuration uses the default `nvim-lsp-setup` bindings. Copied below:
