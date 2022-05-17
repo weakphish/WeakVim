@@ -19,7 +19,7 @@ Here's a brief description of each file and it's purpose.
 - `lualine-config.lua`: Configuration for `lualine` plugin.
 - `packer-setup.lua`: Code that bootstraps packer.
 - `plugins.lua`: Declares my plugins for packer.
-- `telescope.lua`: Configuration for `telescope` plugin.
+- `telescope-config.lua`: Configuration for `telescope` plugin.
 
 # Default Bindings
 Most bindings use the default leader key, SPC. A major key in selecting bindings was to try and keep
