@@ -14,13 +14,12 @@ Here's a brief description of each file and it's purpose.
 
 - `aerial-config.lua`: Configuration for the Aerial plugin, which shows an outline of the current file.
 - `appearance.lua`: Configure the appearance of Neovim, mostly theming and syntax highlighting configuration.
-- `bindings.lua`: Custom bindings. LSP bindings are found in `completion.lua` due to me not knowing a way to refactor the binding assignment out of the `on_attach` function found there.
 - `editor.lua`: General editor behavior. Pretty brief, kind of a catch-all for stuff that doesn't fit elsewhere.
 - `indent-config.lua`: Configuration for the `indent-blankline` plugin.
 - `lualine-config.lua`: Configuration for `lualine` plugin.
-- `nvim-tree-config.lua`: Configuration for the `nvim-tree` plugin.
 - `packer-setup.lua`: Code that bootstraps packer.
 - `plugins.lua`: Declares my plugins for packer.
+- `telescope.lua`: Configuration for `telescope` plugin.
 
 # Default Bindings
 Most bindings use the default leader key, SPC. A major key in selecting bindings was to try and keep
@@ -31,22 +30,17 @@ them mnemonic.
 - `<leader>fg` to open a fuzzy finder (ripgrep)
 - `<leader>fb` to open a buffer finder.
 - `<leader>fh` to open a tag menu.
+- `<leader>r` to search references to the hovered symbol
+- `<leader>s` to search the document's symbols
 
 ## Aerial (file outline)
 - `<leader>tb` to toggle Aerial outline
 
-## NvimTree
-- `<leader>nt` to toggle NvimTree
-
 ## LSP / Completion
 My configuration uses the default `nvim-lsp-setup` bindings. Copied below:
 
-- `gD` = Go to declaration
-- `gd` = Go to definition
-- `gt` = Show type definition
-- `gi` = Show implementationimplementation()
-- `gr` = Show references 
 - `K` = `shift + k` = Show hover 
 - `<leader>rn` = Rename symbol 
 - `<leader>ca` = Show code actions in a hover window 
 - `<leader>f` = Format selection 
+

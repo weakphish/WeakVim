@@ -5,6 +5,9 @@ if fn.empty(fn.glob(install_path)) > 0 then
   packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
+-- Set mapleader
+vim.g.mapleader = " "
+
 -- Load plugins
 require('packer_setup')
 require('plugins')
@@ -15,6 +18,6 @@ require('editor')
 require('aerial-config')
 require('indent-config')
 require('lualine-config')
--- Keybindings and completion
-require('bindings')
+require('telescope-config')
+-- Completion
 require('completion')

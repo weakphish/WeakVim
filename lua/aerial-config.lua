@@ -37,3 +37,10 @@ require("aerial").setup {
   -- Set it to false to display all symbols
   filter_kind = false,
 }
+
+-- Bindings
+vim.api.nvim_set_keymap('n', '<leader>tb', '<cmd>AerialToggle!<CR>', {noremap=true})
+vim.api.nvim_set_keymap('n', '{', '<cmd>AerialPrev<CR>', {noremap=true})
+vim.api.nvim_set_keymap('n', '}', '<cmd>AerialNext<CR>', {noremap=true})
+vim.api.nvim_set_keymap('n', '[[', '<cmd>AerialPrevUp<CR>', {noremap=true})
+vim.api.nvim_set_keymap('n', ']]', '<cmd>AerialNextUp<CR>', {noremap=true})
