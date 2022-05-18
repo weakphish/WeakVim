@@ -1,10 +1,12 @@
 require('nvim-lsp-setup').setup({
     default_mappings = false,
     mappings = {
-        K = 'lua vim.lsp.buf.hover()',
-        ['<space>rn'] = 'lua vim.lsp.buf.rename()',
-        ['<space>ca'] = 'lua vim.lsp.buf.code_action()',
-        ['<space>f'] = 'lua vim.lsp.buf.formatting()',
+        ['<leader>gD']= 'lua vim.lsp.buf.declaration()',
+        ['<leader>gd'] = 'lua vim.lsp.buf.definition()',
+        ['<leader>k'] = 'lua vim.lsp.buf.hover()',
+        ['<leader>rn'] = 'lua vim.lsp.buf.rename()',
+        ['<leader>ca'] = 'lua vim.lsp.buf.code_action()',
+        ['<leader>f'] = 'lua vim.lsp.buf.formatting()',
     },
     -- Global on_attach
     on_attach = function(client, bufnr) 
