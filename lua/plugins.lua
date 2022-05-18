@@ -17,6 +17,12 @@ return require('packer').startup(function()
     use 'hrsh7th/cmp-nvim-lsp'          -- LSP source for nvim-cmp
     use 'saadparwaiz1/cmp_luasnip'      -- Snippets source for nvim-cmp
     use 'L3MON4D3/LuaSnip'              -- Snippets plugin
+    use {                               -- Pop-up of available commands when working bindings
+      "folke/which-key.nvim",
+      config = function()
+        require("which-key").setup {}
+      end
+    }
     -- Languages
     use 'sheerun/vim-polyglot'          -- Works for most languages
     use 'rust-lang/rust.vim'            -- More specific stuff for Rust
