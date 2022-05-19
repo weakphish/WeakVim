@@ -52,4 +52,4 @@ My configuration uses the default `nvim-lsp-setup` bindings. Copied below:
 - `<leader>gD` = Go to symbol declaration.
 - `<leader>rn` = Rename symbol.
 - `<leader>ca` = Show code actions in a hover window.
-- `<leader>f` = Format selection.
+- `<leader>fo` = Format selection.

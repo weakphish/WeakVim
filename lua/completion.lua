@@ -7,7 +7,7 @@ require('nvim-lsp-setup').setup({
         ['<leader>k'] = 'lua vim.lsp.buf.hover()',
         ['<leader>rn'] = 'lua vim.lsp.buf.rename()',
         ['<leader>ca'] = 'lua vim.lsp.buf.code_action()',
-        ['<leader>f'] = 'lua vim.lsp.buf.formatting()',
+        ['<leader>fo'] = 'lua vim.lsp.buf.formatting()',
     },
     -- Global on_attach
     on_attach = function(client, bufnr) 
