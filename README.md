@@ -37,7 +37,7 @@ them mnemonic.
 - `<leader>ff` to open a file finder.
 - `<leader>fg` to open a fuzzy finder (ripgrep).
 - `<leader>fb` to open a buffer list.
-- `<leader>fh` to open a tag menu.
+- `<leader>fh` to open a searchable help menu.
 - `<leader>gr` to search references to the symbol under the cursor.
 - `<leader>s` to search the document's symbols.
 
