@@ -1,5 +1,4 @@
 -- Bindings
---
 -- Find files
 vim.api.nvim_set_keymap(
     "n",
@@ -26,19 +25,5 @@ vim.api.nvim_set_keymap(
     "n",
     "<leader>fh",
     ":Telescope help_tags<cr>",
-    { noremap = true}
-)
--- Show symbol references 
-vim.api.nvim_set_keymap(
-    "n",
-    "<leader>r",
-    ":Telescope lsp_references<cr>",
-    { noremap = true}
-)
--- Show document symbols
-vim.api.nvim_set_keymap(
-    "n",
-    "<leader>s",
-    ":Telescope lsp_document_symbols<cr>",
     { noremap = true}
 )
