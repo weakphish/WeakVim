@@ -14,6 +14,7 @@ Here's a brief description of each file and it's purpose.
 
 - `aerial-config.lua`: Configuration for the Aerial plugin, which shows an outline of the current file.
 - `appearance.lua`: Configure the appearance of Neovim, mostly theming and syntax highlighting configuration.
+- `cmp-config.lua`: Configure cmp, a completion plugin
 - `editor.lua`: General editor behavior. Pretty brief, kind of a catch-all for stuff that doesn't fit elsewhere.
 - `indent-config.lua`: Configuration for the `indent-blankline` plugin.
 - `lualine-config.lua`: Configuration for `lualine` plugin.
@@ -21,37 +22,34 @@ Here's a brief description of each file and it's purpose.
 - `plugins.lua`: Declares my plugins for packer.
 - `telescope-config.lua`: Configuration for `telescope` plugin.
 
-## Telescope usage
-You may notice that the bindings are split by being defined in the LSP setup and in the Telescope 
-configuration, accomplishing similar things. My goal was to make any sort of 'menu' items, i.e. 
-actions that would require a selection or show a list like `show symbol references` be handled by 
-Telescope, whereas simple motions like `go to definition` being handled in the LSP declaration.
-This differentiation lets Telescope be the main provider for nice looking menus rather than the 
-status bar while keeping unchanged commands in the LSP configuration (i.e. `go to definition` which 
-can be done through Telescope or the LSP plugin).
+## Telescope vs. LSP
+You may notice that the bindings for some LSP features are defined in `telescope-config` rather than
+`completion` and use Telescope to call them. This is because Telescope provides some nice menus 
+for various LSP features such as `show references`. Therefore, I decided to split off any LSP 
+commands that provide a 'menu' to be handled by Telescope, since it generally looks nice than a 
+buffer pop-up at the bottom.
 
 # Default Bindings
-Most bindings use the default leader key, SPC. A major key in selecting bindings was to try and keep
+Most bindings use the default leader key, SPC. A major factor in selecting bindings was to try and keep
 them mnemonic.
 
 ## Telescope
-- `<leader>ff` to open a file finder
-- `<leader>fg` to open a fuzzy finder (ripgrep)
-- `<leader>fb` to open a buffer finder.
+- `<leader>ff` to open a file finder.
+- `<leader>fg` to open a fuzzy finder (ripgrep).
+- `<leader>fb` to open a buffer list.
 - `<leader>fh` to open a tag menu.
-- `<leader>gr` to search references to the hovered symbol
-- `<leader>s` to search the document's symbols
+- `<leader>gr` to search references to the symbol under the cursor.
+- `<leader>s` to search the document's symbols.
 
 ## Aerial (file outline)
-- `<leader>tb` to toggle Aerial outline
+- `<leader>tb` to toggle Aerial outline of symbols.
 
 ## LSP / Completion
 My configuration uses the default `nvim-lsp-setup` bindings. Copied below:
 
-- `<leader>k` = Show hover
-- `<leader>gd` = Go to symbol definition
-- `<leader>gD` = Go to symbol declaration
-- `<leader>rn` = Rename symbol
-- `<leader>ca` = Show code actions in a hover window 
-- `<leader>f` = Format selection
-
+- `<leader>k` = Show pop-up of symbol under the cursor (generally, documentation).
+- `<leader>gd` = Go to symbol definition.
+- `<leader>gD` = Go to symbol declaration.
+- `<leader>rn` = Rename symbol.
+- `<leader>ca` = Show code actions in a hover window.
+- `<leader>f` = Format selection.
