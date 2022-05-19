@@ -8,9 +8,6 @@ require('nvim-lsp-setup').setup({
         ['<leader>rn'] = 'lua vim.lsp.buf.rename()',
         ['<leader>ca'] = 'lua vim.lsp.buf.code_action()',
         ['<leader>f'] = 'lua vim.lsp.buf.formatting()',
-        ['<leader>gd'] = 'lua require"telescope.builtin".lsp_definitions()',
-        ['<leader>gi'] = 'lua require"telescope.builtin".lsp_implementations()',
-        ['leader>gr'] = 'lua require"telescope.builtin".lsp_references()',
     },
     -- Global on_attach
     on_attach = function(client, bufnr) 

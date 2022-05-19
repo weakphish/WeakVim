@@ -27,3 +27,17 @@ vim.api.nvim_set_keymap(
     ":Telescope help_tags<cr>",
     { noremap = true}
 )
+-- Show document symbols in Telescope
+vim.api.nvim_set_keymap(
+    "n",
+    "<leader>s",
+    ":Telescope lsp_document_symbols<cr>",
+    { noremap = true}
+)
+-- Show symbol references in Telescope
+vim.api.nvim_set_keymap(
+    "n",
+    "<leader>gr",
+    ":Telescope lsp_references<cr>",
+    { noremap = true}
+)

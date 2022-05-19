@@ -21,6 +21,15 @@ Here's a brief description of each file and it's purpose.
 - `plugins.lua`: Declares my plugins for packer.
 - `telescope-config.lua`: Configuration for `telescope` plugin.
 
+## Telescope usage
+You may notice that the bindings are split by being defined in the LSP setup and in the Telescope 
+configuration, accomplishing similar things. My goal was to make any sort of 'menu' items, i.e. 
+actions that would require a selection or show a list like `show symbol references` be handled by 
+Telescope, whereas simple motions like `go to definition` being handled in the LSP declaration.
+This differentiation lets Telescope be the main provider for nice looking menus rather than the 
+status bar while keeping unchanged commands in the LSP configuration (i.e. `go to definition` which 
+can be done through Telescope or the LSP plugin).
+
 # Default Bindings
 Most bindings use the default leader key, SPC. A major key in selecting bindings was to try and keep
 them mnemonic.
@@ -30,7 +39,7 @@ them mnemonic.
 - `<leader>fg` to open a fuzzy finder (ripgrep)
 - `<leader>fb` to open a buffer finder.
 - `<leader>fh` to open a tag menu.
-- `<leader>r` to search references to the hovered symbol
+- `<leader>gr` to search references to the hovered symbol
 - `<leader>s` to search the document's symbols
 
 ## Aerial (file outline)
@@ -39,8 +48,10 @@ them mnemonic.
 ## LSP / Completion
 My configuration uses the default `nvim-lsp-setup` bindings. Copied below:
 
-- `K` = `shift + k` = Show hover 
-- `<leader>rn` = Rename symbol 
+- `<leader>k` = Show hover
+- `<leader>gd` = Go to symbol definition
+- `<leader>gD` = Go to symbol declaration
+- `<leader>rn` = Rename symbol
 - `<leader>ca` = Show code actions in a hover window 
-- `<leader>f` = Format selection 
+- `<leader>f` = Format selection
 
