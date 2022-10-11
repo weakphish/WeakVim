@@ -17,8 +17,11 @@ require('editor')
 -- Plugin Configurations
 require('aerial-config')
 require('cmp-config')
+require('dressing-config')
 require('indent-config')
 require('lualine-config')
 require('telescope-config')
+require('tree-config')
+require('whichkey-config')
 -- Completion
 require('completion')
